@@ -1,0 +1,9 @@
+.book-list .image {
+  height: 300px;
+  background-repeat: round; }
+.book-list .card-title {
+  font-size: 20px; }
+.book-list a {
+  cursor: pointer; }
+
+/*# sourceMappingURL=book-list.component.css.map */

@@ -1,0 +1,65 @@
+<div class="house" *ngIf="house">
+    <div class="row">
+        <div class="col s12">
+            <div class="card-panel teal">
+                <div class="title">{{house.name}}</div>
+
+                <div *ngIf="house.region">
+                    <span class="name">Region: </span>{{house.region}}
+                </div>
+                <div *ngIf="house.coatOfArms">
+                    <span class="name">CoatOfArms: </span>{{house.coatOfArms}}
+                </div>
+                <div *ngIf="house.words">
+                    <span class="name">Words: </span>{{house.words}}
+                </div>
+                <div *ngIf="house.titles.length > 0">
+                    <span class="name">Titles: </span>
+                    <div *ngFor="let title of house.titles">"{{title}}"</div>
+                </div>
+                <div *ngIf="house.seats.length > 0">
+                    <span class="name">Seats:</span>
+                    <div *ngFor="let seat of house.seats">{{seat}}</div>
+                </div>
+                <div *ngIf="house.currentLord && currentLord" (click)="onRoute('character',currentLord)">
+                    <span class="name">CurrentLord: </span><span class="link">{{currentLord.name}}</span>
+                </div>
+                <div *ngIf="house.heir && heir" (click)="onRoute('character',heir)">
+                    <span class="name">Heir: </span><span class="link">{{heir.name}}</span>
+                </div>
+                <div *ngIf="house.overlord && overlord" (click)="onRoute('house',overlord)">
+                    <span class="name">Overlord: </span><span class="link">{{overlord.name}}</span>
+                </div>
+                <div>
+                    <span *ngIf="house.founded" class="name">Founded: </span>{{house.founded}}
+                </div>
+                <div *ngIf="house.founder && founder" (click)="onRoute('character',founder)">
+                    <span class="name">Founder: </span><span class="link">{{founder.name}}</span>
+                </div>
+                <div>
+                    <span *ngIf="house.diedOut" class="name">DiedOut: </span>{{house.diedOut}}
+                </div>
+                <div *ngIf="house.ancestralWeapons.length > 0">
+                    <span class="name">Ancestral Weapons:</span>
+                    <div *ngFor="let weapon of house.ancestralWeapons">{{weapon}}</div>
+                </div>
+                <div *ngIf="house.cadetBranches.length > 0">
+                    <span class="name">Cadet Branches:</span>
+                    <div class="link" *ngFor="let house of branches" (click)="onRoute('house',house)">
+                        {{house.name}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <div class="card-panel teal character-list">
+                <span class="name">Sworn Members:</span>
+                <div class="scroll">
+                    <character-list [characterList]="house.swornMembers" [loadNum]="5"></character-list>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+<div class="character" *ngIf="character">
+    <div class="row">
+        <div class="col s12">
+            <div class="card-panel teal">
+                <div class="title">{{character.name}}</div>
+                <div *ngIf="character.gender">
+                    <span class="name">Gender: </span>{{character.gender}}
+                </div>
+                <div *ngIf="character.culture">
+                    <span class="name">Culture: </span>{{character.culture}}
+                </div>
+                <div *ngIf="character.born">
+                    <span class="name">Born: </span>{{character.born}}
+                </div>
+                <div *ngIf="character.died">
+                    <span class="name">Died: </span>{{character.died}}
+                </div>
+                <div *ngIf="character.titles.length > 0"><span class="name">Titles:</span>
+                    <div *ngFor="let title of character.titles">{{title}}</div>
+                </div>
+                <div *ngIf="character.aliases.length > 0">
+                    <span class="name">Aliases:</span>
+                    <div *ngFor="let alias of character.aliases">{{alias}}</div>
+                </div>
+
+                <div *ngIf="character.father && father" (click)="onRoute('character',father)">
+                    <span class="name">Father: </span><span class="link">{{father.name}}</span>
+                </div>
+                <div *ngIf="character.mother && mother" (click)="onRoute('character',mother)">
+                    <span class="name">Mother: </span><span class="link">{{mother.name}}</span>
+                </div>
+                <div *ngIf="character.spouse && spouse" (click)="onRoute('character',spouse)">
+                    <span class="name">Spouse: </span><span class="link">{{spouse.name}}</span>
+                </div>
+
+                <div *ngIf="character.allegiances.length > 0">
+                    <span class="name">Allegiances:</span>
+                    <div class="link" *ngFor="let allegiance of houses" (click)="onRoute('house',allegiance)">
+                        {{allegiance.name}}
+                    </div>
+                </div>
+                <div *ngIf="character.books.length > 0">
+                    <span class="name">Books:</span>
+                    <div class="link" *ngFor="let book of books" (click)="onRoute('book',book)">
+                        {{book.name}}
+                    </div>
+                </div>
+                <div *ngIf="character.povBooks.length > 0">
+                    <span class="name">PovBooks:</span>
+                    <div class="link" *ngFor="let povBook of povBooks" (click)="onRoute('book',povBook)">
+                        {{povBook.name}}
+                    </div>
+                </div>
+                <div *ngIf="character.tvSeries.length > 0">
+                    <span class="name">TvSeries:</span>
+                    <div *ngFor="let season of character.tvSeries">{{season}}</div>
+                </div>
+                <div *ngIf="character.playedBy.length > 0">
+                    <span class="name">PlayedBy:</span>
+                    <div *ngFor="let played of character.playedBy">{{played}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

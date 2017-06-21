@@ -1,0 +1,10 @@
+.character-list .load-more {
+  text-align: center;
+  padding: 10px 0;
+  cursor: pointer; }
+  .character-list .load-more:hover {
+    background-color: #d4d4d4; }
+.character-list .collection-item {
+  color: #343434; }
+
+/*# sourceMappingURL=character-list.component.css.map */

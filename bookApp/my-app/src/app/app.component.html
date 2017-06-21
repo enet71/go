@@ -1,0 +1,17 @@
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper" style="background-color: #0f0f0f">
+            <a [routerLink]="['/bookList']" class="brand-logo center"
+               style="font-size:40px; color: #ffb849;font-family: 'Times New Roman', Times, serif;">Game of Thrones</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a [routerLink]="['/bookList']">Books</a></li>
+                <li><a [routerLink]="['/character-list']">Characters</a></li>
+                <li><a [routerLink]="['/houses-list']">Houses</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<search></search>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,0BAAW;EACT,UAAU,EAAE,MAAM;EAClB,OAAO,EAAE,MAAM;EACf,MAAM,EAAE,OAAO;EACf,gCAAQ;IACN,gBAAgB,EAAE,OAAO;AAI7B,gCAAgB;EACd,KAAK,EAAE,OAAO",
+"sources": ["character-list.component.scss"],
+"names": [],
+"file": "character-list.component.css"
+}

@@ -1,0 +1,10 @@
+.house-list .load-more {
+  text-align: center;
+  padding: 10px 0;
+  cursor: pointer; }
+  .house-list .load-more:hover {
+    background-color: #d4d4d4; }
+.house-list .collection-item {
+  color: #343434; }
+
+/*# sourceMappingURL=house-list.component.css.map */

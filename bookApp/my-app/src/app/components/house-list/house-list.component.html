@@ -1,0 +1,4 @@
+<div class="collection house-list">
+    <a style="cursor: pointer" *ngFor="let house of houseList" class="collection-item" (click)="onOpen(house)">{{house.name? house.name : 'No name'}}</a>
+    <div class="load-more" (click)="loadMore()">Load More</div>
+</div>
